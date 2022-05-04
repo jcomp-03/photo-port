@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line
 import { ReactDOM, render } from 'react-dom';
 import './index.css';
 import App from './App';
