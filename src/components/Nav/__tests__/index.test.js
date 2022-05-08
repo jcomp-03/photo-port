@@ -12,6 +12,8 @@ const categories = [
 ];
 const mockCurrentCategory = jest.fn();
 const mockSetCurrentCategory = jest.fn();
+const mockContactSelected = jest.fn();
+const mockSetContactSelected = jest.fn();
 
 // use the describe function to declare the component
 // we're testing
@@ -26,6 +28,8 @@ describe("Testing the 'Nav' component", () => {
         categories={categories}
         setCurrentCategory={mockSetCurrentCategory}
         currentCategory={mockCurrentCategory}
+        contactSelected={mockContactSelected}
+        setContactSelected={mockSetContactSelected}
       />
     );
   });
@@ -38,6 +42,8 @@ describe("Testing the 'Nav' component", () => {
         categories={categories}
         setCurrentCategory={mockSetCurrentCategory}
         currentCategory={mockCurrentCategory}
+        contactSelected={mockContactSelected}
+        setContactSelected={mockSetContactSelected}
       />
     );
     expect(asFragment()).toMatchSnapshot();
@@ -51,6 +57,8 @@ describe("Testing the 'Nav' component", () => {
           categories={categories}
           setCurrentCategory={mockSetCurrentCategory}
           currentCategory={mockCurrentCategory}
+          contactSelected={mockContactSelected}
+          setContactSelected={mockSetContactSelected}
         />
       );
 
@@ -65,6 +73,8 @@ describe("Testing the 'Nav' component", () => {
         categories={categories}
         setCurrentCategory={mockSetCurrentCategory}
         currentCategory={mockCurrentCategory}
+        contactSelected={mockContactSelected}
+        setContactSelected={mockSetContactSelected}
       />);
       // Assert
       expect(getByTestId("link")).toHaveTextContent("Oh Snap!");
